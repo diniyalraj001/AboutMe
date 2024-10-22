@@ -1,0 +1,252 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Dark background for contrast */
+    color: #ffffff; /* White text for readability */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Space between columns */
+    align-items: flex-start; /* Align items to the start for better flow */
+    padding: 20px;
+}
+
+/* Left Column (Profile) */
+.left-column {
+    flex: 0 0 40%; /* Set the width of the left column */
+    text-align: center;
+    background-color: #333333; /* Slightly lighter dark for profile section */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow effect */
+    margin-right: 20px; /* Space between columns */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular profile image */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin: 15px 0 5px 0;
+    font-size: 2.5rem; /* Larger font size */
+}
+
+.pronouns, .profession {
+    font-size: 1.2rem; /* Consistent font size for additional information */
+    color: #ccc; /* Softer color for non-primary text */
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px; /* Spacing between heading and icons */
+}
+
+.icons img {
+    width: 30px;
+    margin: 0 10px; /* Equal spacing around icons */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transition for hover effects */
+}
+
+.icons img:hover {
+    transform: scale(1.1); /* Scale up icons on hover */
+    filter: brightness(1.2); /* Slight brightness increase on hover */
+}
+
+/* Right Column (Details) */
+.right-column {
+    flex: 0 0 60%; /* Set the width of the right column */
+    background-color: #2c2c2c; /* Darker background for content */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Consistent shadow effect */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Section Headings */
+.right-column h2 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 10px; /* Space below headings */
+    color: #ffcc00; /* Bright color for headings */
+}
+
+.right-column h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.right-column p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #ddd; /* Softer color for paragraphs */
+}
+
+/* Experience Section */
+.experience {
+    margin-top: 30px; /* Space above experience section */
+    background-color: #333; /* Background color for experience section */
+    padding: 20px; /* Padding inside the experience section */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow effect */
+}
+
+.experience h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.job {
+    margin-bottom: 20px;
+}
+
+.job h3 {
+    margin: 0;
+    color: #ffcc00; /* Color for job titles */
+}
+
+.job p {
+    font-size: 1rem;
+    color: #ccc; /* Color for job entries */
+    margin: 5px 0;
+}
+
+/* Skills Section */
+.skills {
+    text-align: center; /* Center text for skills section */
+    margin: 20px auto; /* Center and add space above and below */
+    width: 90%; /* Responsive width */
+    background-color: #333; /* Background color for skills section */
+    padding: 20px; /* Padding inside the skills section */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow effect */
+}
+
+.skills h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align skill tags */
+}
+
+.skills-list span {
+    background-color: #444; /* Darker background for skill tags */
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.skills-list span:hover {
+    background-color: #555; /* Lighter on hover */
+}
+
+/* Resume Button */
+.resume-button {
+    display: block;
+    background-color: #ffcc00; /* Bright button color */
+    color: #111; /* Dark text on button */
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover */
+}
+
+.resume-button:hover {
+    background-color: #e6b800; /* Slightly darker on hover */
+    transform: scale(1.05); /* Scale button up on hover */
+}
+
+/* Animation Styles */
+.fade-in {
+    opacity: 0; /* Start invisible */
+    transition: opacity 1s ease; /* Transition for fade effect */
+}
+
+.fade-in.visible {
+    opacity: 1; /* Fully visible when class added */
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.bounce-active {
+    animation: bounce 1.5s infinite; /* Continuous bounce */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack columns on small screens */
+        align-items: center; /* Center items for better layout on smaller screens */
+    }
+
+    .left-column, .right-column {
+        width: 90%; /* Adjust width for smaller devices */
+        padding: 20px;
+        margin: 10px 0; /* Space between columns on mobile */
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .pronouns, .profession {
+        font-size: 1rem;
+    }
+
+    .right-column h2 {
+        font-size: 1.4rem;
+    }
+
+    .right-column h3 {
+        font-size: 1rem;
+    }
+
+    .right-column p {
+        font-size: 0.9rem;
+    }
+
+    .skills-list span {
+        font-size: 0.8rem; /* Smaller font for skill tags */
+    }
+}
